@@ -4,7 +4,8 @@
   "description": "Make every &lt;h1>, &lt;h2>, etc. linkable by default.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ws --cors.origin=* --port 48001",
+    "test": "flow && node ./node_modules/.bin/kavun src",
   },
   "repository": {
     "type": "git",
