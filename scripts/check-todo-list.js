@@ -7,7 +7,7 @@ let latestVersionStartsAtLine = -1;
 let nextVersionStartsAtLine = -1;
 lines.forEach((line, lineNumber) => {
   if (latestVersionStartsAtLine!==-1 && nextVersionStartsAtLine===-1 && line.startsWith('v')) nextVersionStartsAtLine = lineNumber;
-  if (latestVersionStartsAtLine===-1 && line.startsWith('v')) latestVersionStartsAtLine = lineNumber;
+  if (latestVersionStartsAtLine===-1 && line.startsWith('# v')) latestVersionStartsAtLine = lineNumber;
 });
 
 const items = lines.slice(latestVersionStartsAtLine, nextVersionStartsAtLine);

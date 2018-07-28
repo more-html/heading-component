@@ -4,7 +4,7 @@ Make every &lt;h1>, &lt;h2>, etc. linkable by default.
 ## Make a new Release
 
 You want to know if you are ready to release a new verison. 
-Run `npm run releasable`, this starts a script that checks the [CHANGELOG.md](./CHANGELOG.md), which
+Run `npm run releasable --silent`, this starts a script that checks the [CHANGELOG.md](./CHANGELOG.md), which
 is your to-do list! What, to-do list? Yes. See below how and why?
 
 ## Development Process
