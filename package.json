@@ -6,6 +6,8 @@
   "scripts": {
     "start": "ws --cors.origin=* --port 48001",
     "test": "flow && node ./node_modules/.bin/kavun src",
+    "preversion": "node ./scripts/check-todo-list.js && npm test && npm run build && git add -A dist",
+    "release": "npm version major"
   },
   "repository": {
     "type": "git",
