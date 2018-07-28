@@ -1,0 +1,25 @@
+{
+  "name": "linkable-headline-component",
+  "version": "1.0.0",
+  "description": "Make every &lt;h1>, &lt;h2>, etc. linkable by default.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/more-html/linkable-headline-component.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/more-html/linkable-headline-component/issues"
+  },
+  "homepage": "https://github.com/more-html/linkable-headline-component#readme",
+  "devDependencies": {
+    "flow-bin": "^0.77.0",
+    "kavun": "^1.0.0",
+    "local-web-server": "^2.6.0",
+    "parcel-bundler": "^1.9.7"
+  }
+}
