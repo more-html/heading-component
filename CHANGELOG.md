@@ -11,6 +11,6 @@
 - [x] Setup release scripts, including CHANGELOG check
 - [x] Make the example page
 - [x] Make the first version work without JS (without fancyness)
-- [ ] Build a version work WITH JS, as a web component
+- [ ] Build a version work WITH JS, as a web component (requiring a `slug` attribute)
 - [x] Describe the development process
 - [x] Document what the component shall do

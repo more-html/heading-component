@@ -29,6 +29,33 @@ Why providing two ways to write it as shown above anyways?
    
 [no-is]: ***missing link ...***
 
+### Configuring the component
+
+Note: For simplicity, below only `<more-html-h1>` is used, but everything also applies
+to `<more-html-heading>`.
+
+By default the component does the following things:
+1) It builds a URL for any heading that can be clicked and reused to find this element again
+1) To build the URL it removes any hash that might be on the URL.
+
+#### Attribute `slug`
+
+The slug that will be used to build the link can be auto-generated, simply by leaving out
+the attribute `slug`. If you like to control your links you can determine the hash part of URL by 
+passing a value to `slug`. For example like so:
+
+```
+<more-html-h1 slug="more-html-is-coming">
+  <h1>More-HTML is coming</h1>
+<more-html-h1>
+```
+
+When the user hovers the heading, the linkable URL will be: `https://your.domain/path/#more-html-is-coming`.
+By default it might have some kind of hash at the end, just to make sure it never interfers with any
+of your IDs on the page. So if you would leave out the `slug` attribute, the URL becomes something like
+this: `https://your.domain/path/#more-html-is-coming-sa7y2s`.
+
+
 ## Make a new Release
 
 You want to know if you are ready to release a new verison. 
