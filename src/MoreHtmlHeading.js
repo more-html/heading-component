@@ -32,3 +32,9 @@ class MoreHtmlHeading extends HTMLElement {
 }
 
 customElements.define('morehtml-heading', MoreHtmlHeading);
+customElements.define('morehtml-h1', class extends MoreHtmlHeading {});
+customElements.define('morehtml-h2', class extends MoreHtmlHeading {});
+customElements.define('morehtml-h3', class extends MoreHtmlHeading {});
+customElements.define('morehtml-h4', class extends MoreHtmlHeading {});
+customElements.define('morehtml-h5', class extends MoreHtmlHeading {});
+customElements.define('morehtml-h6', class extends MoreHtmlHeading {});
