@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/more-html/linkable-headline-component.git"
+    "url": "git+https://github.com/more-html/heading-component.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/more-html/linkable-headline-component/issues"
+    "url": "https://github.com/more-html/heading-component/issues"
   },
-  "homepage": "https://github.com/more-html/linkable-headline-component#readme",
+  "homepage": "https://github.com/more-html/heading-component#readme",
   "devDependencies": {
     "flow-bin": "^0.77.0",
     "kavun": "^1.0.0",
