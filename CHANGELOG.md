@@ -1,5 +1,7 @@
 - [ ] Move the `check-todo-list.js` into it's own repo, including the description how and why to use it.
 - [ ] Write out some project guidelines (like gold standard, progressive enhancement by default, etc.)
+      Every component in this orga can also use a different web component compiling framework/library, in the
+      end it has to deliver a web component, no matter if it is with pure JS, stencil, skate, etc.
 - [ ] Plan/Write about the core/loader component, which can be loaded for common web-component loading/polyfilling/etc.
       will land in a separate repo some day (might start out being embedded in here)
 
