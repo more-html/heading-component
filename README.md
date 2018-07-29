@@ -9,30 +9,15 @@ The following is also the best for SEO compatibility, since the `<h1>` is still
 visible even without any page rendering needed.
 
 ```
-<morehtml-h1><h1>More-HTML is coming</h1></morehtml-h1>
-
-<!-- Alternatively you can also write, to not duplicate the `h1`. -->
-<morehtml-heading><h1>More-HTML is coming</h1></morehtml-heading>
+<h1><morehtml-h1>More-HTML is coming</morehtml-h1></h1>
 ```
 
 For now, we only suggest the above syntax. If you want to cater for a modern-only environment
-you might want more comfortable syntax, like `<morehtml-h1>More-HTML is coming</morehtml-h1>`
+you might want simpler syntax, like `<morehtml-h1>More-HTML is coming</morehtml-h1>`
 but for convinience and for the reasons solved and listed for the above solution, this
 way is not planned for now.
 
-Why providing two ways to write it as shown above anyways?
-
-1) This is still very early stage, so I am experimenting, trying to find out what is right.
-1) The syntax `<morehtml-h1>` can be easier used as a replacement for `<h1>` since it contains the
-   semantics of being an H1 (which `<morehtml-heading>` does not).
-   Of course, the ideal thing would be to have `<h1 is="morehtml-h1">` but that is just [not happening for now][no-is].
-   
-[no-is]: ***missing link ...***
-
 ### Configuring the component
-
-Note: For simplicity, below only `<morehtml-h1>` is used, but everything also applies
-to `<morehtml-heading>`.
 
 By default the component does the following things:
 1) It builds a URL for any heading that can be clicked and reused to find this element again
@@ -45,9 +30,11 @@ the attribute `slug`. If you like to control your links you can determine the ha
 passing a value to `slug`. For example like so:
 
 ```
-<morehtml-h1 slug="more-html-is-coming">
-  <h1>More-HTML is coming</h1>
-<morehtml-h1>
+<h1>
+  <morehtml-h1 slug="more-html-is-coming">
+    More-HTML is coming
+  <morehtml-h1>
+</h1>
 ```
 
 When the user hovers the heading, the linkable URL will be: `https://your.domain/path/#more-html-is-coming`.
