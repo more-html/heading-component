@@ -1,7 +1,7 @@
 {
-  "name": "linkable-headline-component",
+  "name": "heading-component",
   "version": "1.0.0",
-  "description": "Make every &lt;h1>, &lt;h2>, etc. linkable by default.",
+  "description": "Enhance &lt;h1>, &lt;h2>, etc. for example to allow linking to them by default.",
   "main": "index.js",
   "scripts": {
     "start": "ws --cors.origin=* --port 48001",

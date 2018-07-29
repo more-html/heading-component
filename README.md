@@ -1,5 +1,33 @@
-# linkable-headline-component
-Make every &lt;h1>, &lt;h2>, etc. linkable by default.
+# heading-component
+Enhance &lt;h1>, &lt;h2>, etc. for example to allow linking to them by default.
+
+## How to use it?
+
+In order to serve older (non web-component enabled, non-polyfilled) browsers too
+use the following syntax. If you want to load no JS then this version is also for you.
+The following is also the best for SEO compatibility, since the `<h1>` is still 
+visible even without any page rendering needed.
+
+```
+<more-html-h1><h1>More-HTML is coming</h1><more-html-h1>
+
+<!-- Alternatively you can also write, to not duplicate the `h1`. -->
+<more-html-heading><h1>More-HTML is coming</h1><more-html-heading>
+```
+
+For now, we only suggest the above syntax. If you want to cater for a modern-only environment
+you might want more comfortable syntax, like `<more-html-h1>More-HTML is coming</more-html-h1>`
+but for convinience and for the reasons solved and listed for the above solution, this
+way is not planned for now.
+
+Why providing two ways to write it as shown above anyways?
+
+1) This is still very early stage, so I am experimenting, trying to find out what is right.
+1) The syntax `<more-html-h1>` can be easier used as a replacement for `<h1>` since it contains the
+   semantics of being an H1 (which `<more-html-heading>` does not).
+   Of course, the ideal thing would be to have `<h1 is="more-html-h1">` but that is just [not happening for now][no-is].
+   
+[no-is]: ***missing link ...***
 
 ## Make a new Release
 
