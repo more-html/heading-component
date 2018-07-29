@@ -9,7 +9,7 @@
 
 - [ ] On touch devices, show the link onclick, hide it on a second click
 - [ ] Auto generate the slug if none given
-- [ ] Apply style of the slotted element
+- [x] Apply style of the slotted element
 - [ ] Render the link-icon to the left/right of the headline, depending on rtl setting, if there is space
 
 # v1.0.0
