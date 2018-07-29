@@ -31,4 +31,4 @@ class MoreHtmlHeading extends HTMLElement {
   }
 }
 
-customElements.define('more-html-heading', MoreHtmlHeading);
+customElements.define('morehtml-heading', MoreHtmlHeading);
