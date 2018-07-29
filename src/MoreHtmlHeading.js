@@ -22,11 +22,15 @@ class MoreHtmlHeading extends HTMLElement {
   connectedCallback() {
     const linkEl = this.shadowRoot.querySelector('.linkable');
     linkEl.setAttribute('href', `#${this.getAttribute('slug')}`);
+    this._makeHashAsLinkTargetWork()
     
     const showLinkable = () => this.shadowRoot.querySelector('.linkable').style.display = 'inline';
     const hideLinkable = () => this.shadowRoot.querySelector('.linkable').style.display = 'none';
     this.shadowRoot.addEventListener('pointerover', showLinkable);
     this.shadowRoot.addEventListener('pointerout', hideLinkable);
+  }
+  _makeHashAsLinkTargetWork() {
+    this.setAttribute('id', this.getAttribute('slug'));
   }
 }
 
