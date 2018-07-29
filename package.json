@@ -7,6 +7,7 @@
     "start": "ws --cors.origin=* --port 48001",
     "test": "flow && node ./node_modules/.bin/kavun src",
     "releasable": "node ./scripts/check-todo-list.js",
+    "build": "parcel build src/MoreHtmlHeading.js --no-cache --no-source-maps --experimental-scope-hoisting",
     "preversion": "npm run releasable && npm test && npm run build && git add -A dist",
     "release": "npm version major"
   },
