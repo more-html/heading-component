@@ -20,9 +20,7 @@ class MoreHtmlHeading extends HTMLElement {
   }
   connectedCallback() {
     const linkEl = this.shadowRoot.querySelector('.linkable');
-    const linkableUrl = new URL(window.location);
-    linkableUrl.hash = this.getAttribute('slug');
-    linkEl.setAttribute('href', linkableUrl.toString());
+    linkEl.setAttribute('href', `#${this.getAttribute('slug')}`);
     
     const showLinkable = () => this.shadowRoot.querySelector('.linkable').style.display = 'inline';
     const hideLinkable = () => this.shadowRoot.querySelector('.linkable').style.display = 'none';
