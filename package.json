@@ -1,6 +1,6 @@
 {
   "name": "heading-component",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Enhance &lt;h1>, &lt;h2>, etc. for example to allow linking to them by default.",
   "main": "index.js",
   "scripts": {
