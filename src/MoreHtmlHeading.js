@@ -4,8 +4,10 @@ template.innerHTML = `
     a.linkable {
       position: absolute;
       display: none;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.8);
       color: red;
+      text-decoration: none;
+      padding: 0.5rem;
     }
   </style>
   <a class="linkable">#</a>
