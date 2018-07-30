@@ -49,12 +49,62 @@ To understand and evaluate possible solutions, here are the requirements for thi
   <tr>
     <td>customized built-ins</td>
     <td>
+    
       ```
         <h1 is="morehtml-h1">An H1 CBE</h1>
       ```
+      
     </td>
     <td></td>
     <td></td>
   </tr>
   
+  <tr>
+    <td>wrapper (outside)</td>
+    <td>
+    
+      ```
+        <morehtml-h1>
+          <h1>An H1 CBE</h1>
+        </morehtml-h1>
+      ```
+      
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td>wrapped (inside)</td>
+    <td>
+    
+      ```
+        <h1>
+          <morehtml-h1>An H1 CBE</morehtml-h1>
+        </h1>
+      ```
+      
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td>pure web component</td>
+    <td>
+    
+      ```
+        <morehtml-h1>An H1 CBE</morehtml-h1>
+      ```
+      
+    </td>
+    <td></td>
+    <td>
+    
+      1) does not degrade (without JS)
+      
+    </td>
+  </tr>
+  
+</table>  
   
