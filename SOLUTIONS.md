@@ -38,79 +38,88 @@ To understand and evaluate possible solutions, here are the requirements for thi
    if this approach can't be used all styling and event listening, etc. might be a bit harder
    for the end user of the component.
 
- Approach | Example | Pros | Cons
---------- | ------- | ---- | ----  
- customized built-ins | ``` |  |   
-                      | <h1 is="morehtml-h1">An H1 CBE</h1> | | |  
-                      | ``` | | |  
+## Possible solutions
+
+The following are different approaches 
+
+### Solution 1): Customized built-ins
+
+For reasons mentioned above, this seems not to become natively supported in Safari.
+By using customized built-ins, see code below, all native behavior of the heading could be preserved.
+
+```html
+<h1 is="morehtml-h1">An H1 CBE</h1>
+```
   
-   
-   
-<table>
-  <tr>
-    <th>Approach</th>
-    <th>Example</th>
-    <th>Pros</th>
-    <th>Cons</th>
-  </tr>
+Pros:
+1) Native behavior of heading stays intact (no special styling or JS needed).
+1) SEO enabled as before.
+1) User only has to a) load the JS file and b) add the attribute `is="morehtml-h1"`.
+1) Non-JS browsers will just ignore the attribute. The added funtionality 
+   of the web component does not exist.
+
+Cons:
+1) Not supported in Safari (and might never be, requires polyfill?).
+1) Special code for a solution that might never become a standard.
+
+### Solution 2): Wrapper (outside)
+
+In order to preserve the `<h1>` tag it could be "enhanced" by wrapping it with
+the according web component.
+
+```html
+  <morehtml-h1>
+    <h1>An H1 CBE</h1>
+  </morehtml-h1>
+```
   
-  <tr>
-    <td>customized built-ins</td>
-    <td>
-      <code>
-        <h1 is="morehtml-h1">An H1 CBE</h1>
-      </code>
-    </td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td>wrapper (outside)</td>
-    <td>
-    
-      ```
-        <morehtml-h1>
-          <h1>An H1 CBE</h1>
-        </morehtml-h1>
-      ```
+Pros:
+1) Native styling of heading keeps working.
+1) SEO enabled as before.
+1) User only has to a) load the JS file and b) add the tags around heading tags.
+1) Non-JS browsers will just ignore `<morehtml-h1>` tag. The styling will not be influenced. Though the added funtionality 
+   of the web component does also not exist.
+
+Cons:
+1) The web component needs to handle styling specialities. For example, `<h1 style="margin: 2rem">` when the 
+   web component adds the "#"  (the link-icon) before the heading it has to adjust it's style so it renders
+   correctly taking the margin into account. 
+1) Styling of the "#" (link icon) to adapt the style of the heading (size, color, etc.) needs to be done in the web component.
+   Even worse, since the link icon is not inside the H1 it needs to get the computed styles from the H1 and 
+   apply them to the link icon, this sounds computation heavy.
       
-    </td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td>wrapped (inside)</td>
-    <td>
-    
-      ```
-        <h1>
-          <morehtml-h1>An H1 CBE</morehtml-h1>
-        </h1>
-      ```
+### Solution 3): Wrapped (inside)
+
+During development of Solution 2) the styling speciality mentioned in the Cons above led to the following solution.
+
+```
+  <h1>
+    <morehtml-h1>An H1 CBE</morehtml-h1>
+  </h1>
+```
+
+Pros:
+1) Native styling of heading keeps working. If there are nodes inside the H1 and there are CSS selectors accessing them, 
+   they might need to be adapted
+1) SEO enabled as before. (Unkown tags get ignored.)
+1) User only has to a) load the JS file and b) add the tags inside the heading tag.
+1) Non-JS browsers will just ignore `<morehtml-h1>` tag. The styling will not be influenced. Though the added funtionality 
+   of the web component does also not exist.
+1) As opposed to Solution 2) all stylings will apply, the H1 style is also applied to any new node added inside the 
+   web component, which makes them automatically inherit the H1 styles and there is no styling work to do.
+
+Cons:
+1) This might just be a handy way to solve it for this special (edge) case!? The styling issue made it a bit hard.
+1) Nesting the web component inside the original tag might work for H1, but won't work for an IMG tag.
+1) Can this approach be applied to other use cases?
       
-    </td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td>pure web component</td>
-    <td>
-    
-      ```
-        <morehtml-h1>An H1 CBE</morehtml-h1>
-      ```
+### Solution 4): Pure web component
+
+```
+  <morehtml-h1>An H1 CBE</morehtml-h1>
+```
       
-    </td>
-    <td></td>
-    <td>
-    
-      1) does not degrade (without JS)
-      
-    </td>
-  </tr>
-  
-</table>  
-  
+1) Does not degrade, without JS the tags become SPANs, dont even render as `display:block`.
+   (Solvable via `:not(:defined)` selector?)
+1) Is not SEO enabled. (Might be solvable by schema outline!?)
+
