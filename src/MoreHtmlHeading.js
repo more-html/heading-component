@@ -13,7 +13,7 @@ template.innerHTML = `
   <slot></slot>
 `;
 
-class MoreHtmlHeading extends HTMLElement {
+class MoreHtmlHeading extends HTMLHeadingElement {
   constructor() {
     super();
     const root = this.attachShadow({ mode: 'open' });
@@ -34,9 +34,9 @@ class MoreHtmlHeading extends HTMLElement {
   }
 }
 
-customElements.define('morehtml-h1', class extends MoreHtmlHeading {});
-customElements.define('morehtml-h2', class extends MoreHtmlHeading {});
-customElements.define('morehtml-h3', class extends MoreHtmlHeading {});
-customElements.define('morehtml-h4', class extends MoreHtmlHeading {});
-customElements.define('morehtml-h5', class extends MoreHtmlHeading {});
-customElements.define('morehtml-h6', class extends MoreHtmlHeading {});
+customElements.define('morehtml-h1', class extends MoreHtmlHeading {}, {extends: "h1"});
+customElements.define('morehtml-h2', class extends MoreHtmlHeading {}, {extends: "h2"});
+customElements.define('morehtml-h3', class extends MoreHtmlHeading {}, {extends: "h3"});
+customElements.define('morehtml-h4', class extends MoreHtmlHeading {}, {extends: "h4"});
+customElements.define('morehtml-h5', class extends MoreHtmlHeading {}, {extends: "h5"});
+customElements.define('morehtml-h6', class extends MoreHtmlHeading {}, {extends: "h6"});

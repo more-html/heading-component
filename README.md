@@ -9,7 +9,7 @@ The following is also the best for SEO compatibility, since the `<h1>` is still
 visible even without any page rendering needed.
 
 ```
-<h1><morehtml-h1>More-HTML is coming</morehtml-h1></h1>
+<h1 is="morehtml-h1">More-HTML is coming</h1>
 ```
 
 For now, we only suggest the above syntax. If you want to cater for a modern-only environment
