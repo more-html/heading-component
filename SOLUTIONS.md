@@ -37,6 +37,14 @@ To understand and evaluate possible solutions, here are the requirements for thi
    this would be easy, since only a new attribute is added to the heading tag (like so `<h1 is="morehtml-h1">`),
    if this approach can't be used all styling and event listening, etc. might be a bit harder
    for the end user of the component.
+
+ Approach | Example | Pros | Cons
+--------- | ------- | ---- | ----  
+ customized built-ins | ``` |  |   
+                      | <h1 is="morehtml-h1">An H1 CBE</h1> | | |  
+                      | ``` | | |  
+  
+   
    
 <table>
   <tr>
@@ -49,11 +57,9 @@ To understand and evaluate possible solutions, here are the requirements for thi
   <tr>
     <td>customized built-ins</td>
     <td>
-    
-      ```
+      <code>
         <h1 is="morehtml-h1">An H1 CBE</h1>
-      ```
-      
+      </code>
     </td>
     <td></td>
     <td></td>
