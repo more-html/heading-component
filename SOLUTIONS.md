@@ -87,7 +87,7 @@ Cons:
 1) Styling of the "#" (link icon) to adapt the style of the heading (size, color, etc.) needs to be done in the web component.
    Even worse, since the link icon is not inside the H1 it needs to get the computed styles from the H1 and 
    apply them to the link icon, this sounds computation heavy.
-      
+
 ### Solution 3): Wrapped (inside)
 
 During development of Solution 2) the styling speciality mentioned in the Cons above led to the following solution.
@@ -118,7 +118,10 @@ Cons:
 ```
   <morehtml-h1>An H1 CBE</morehtml-h1>
 ```
-      
+
+Pros:
+
+Cons:      
 1) Does not degrade, without JS the tags become SPANs, dont even render as `display:block`.
    (Solvable via `:not(:defined)` selector?)
 1) Is not SEO enabled. (Might be solvable by schema outline!?)
