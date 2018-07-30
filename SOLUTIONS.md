@@ -27,13 +27,13 @@ a solution that will also work without it.
 
 To understand and evaluate possible solutions, here are the requirements for this web component.
 
-1) It must degrade. It must be usable (rendering like a heading and not degrading the actual heading experience)
+1) ***It must degrade***. It must be usable (rendering like a heading and not degrading the actual heading experience)
    without JavaScript (aka without web components). This is mostly a requirement for the
    syntax of such a component. Something like `<morehtml-h1>...</morehtml-h1>` won't degrade since
    it does not degrade down to an `<h1>` without lot's of work and additional styling, etc.  
-1) It must render SEO compatible. H1s are one of the crucial SEO elements to outline content
+1) ***It must render SEO compatible***. H1s are one of the crucial SEO elements to outline content
    and give it structure, make SEO crawlers understand content. This must stay enabled.
-1) Rendering must be preserved by using it as a web component. When using customized built-ins
+1) ***Rendering must be preserved*** (an H1 must look like an H1). When using customized built-ins
    this would be easy, since only a new attribute is added to the heading tag (like so `<h1 is="morehtml-h1">`),
    if this approach can't be used all styling and event listening, etc. might be a bit harder
    for the end user of the component.
