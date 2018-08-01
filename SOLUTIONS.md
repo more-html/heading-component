@@ -42,10 +42,10 @@ To understand and evaluate possible solutions, here are the requirements for thi
 
 The following are different approaches 
 
-### Solution 1): Customized built-ins
+### Solution 1): Customized built-in elements (CBEs)
 
 For reasons mentioned above, this seems not to become natively supported in Safari.
-By using customized built-ins, see code below, all native behavior of the heading could be preserved.
+By using CBEs, see code below, all native behavior of the heading could be preserved.
 
 ```html
 <h1 is="morehtml-h1">An H1 CBE</h1>
@@ -53,6 +53,7 @@ By using customized built-ins, see code below, all native behavior of the headin
   
 Pros:
 1) Native behavior of heading stays intact (no special styling or JS needed).
+1) Progressive enhancement
 1) SEO enabled as before.
 1) User only has to a) load the JS file and b) add the attribute `is="morehtml-h1"`.
 1) Non-JS browsers will just ignore the attribute. The added funtionality 
@@ -82,6 +83,7 @@ the according web component.
   
 Pros:
 1) Native styling of heading keeps working.
+1) Progressive enhancement
 1) SEO enabled as before.
 1) User only has to a) load the JS file and b) add the tags around heading tags.
 1) Non-JS browsers will just ignore `<morehtml-h1>` tag. The styling will not be influenced. Though the added funtionality 
@@ -115,6 +117,7 @@ During development of Solution 2) the styling speciality mentioned in the Cons a
 Pros:
 1) Native styling of heading keeps working. If there are nodes inside the H1 and there are CSS selectors accessing them, 
    they might need to be adapted
+1) Progressive enhancement
 1) SEO enabled as before. (Unkown tags get ignored.)
 1) User only has to a) load the JS file and b) add the tags inside the heading tag.
 1) Non-JS browsers will just ignore `<morehtml-h1>` tag. The styling will not be influenced. Though the added funtionality 
@@ -143,6 +146,7 @@ Supported browsers:
 Pros:
 
 Cons:      
+1) No progressive enhancement
 1) Does not degrade, without JS the tags become SPANs, dont even render as `display:block`.
    (Solvable via `:not(:defined)` selector?)
 1) Is not SEO enabled. (Might be solvable by schema outline!?)
