@@ -3,37 +3,36 @@ Enhance &lt;h1>, &lt;h2>, etc. for example to allow linking to them by default.
 
 ## How to use it?
 
-In order to serve older (non web-component enabled, non-polyfilled) browsers too
-use the following syntax. If you want to load no JS then this version is also for you.
-The following is also the best for SEO compatibility, since the `<h1>` is still 
-visible even without any page rendering needed.
+The following enhances the H1 tag with certain functionality.
+
+This makes use of customized built-in elements (CBEs), which is specified 
+and also implemented in Chrome. Unfortunately not all browsers implement
+custom elements completely (esp. not the customized built-in part, which is used here).
+Polyfills might be required. But the main goal here is to provide a working version, 
+even less featured, degrade gracefully or enhance progressively.
+
+The following is built with a strong focus on it.
 
 ```
+<script type="module" src="<more-html-path>/heading-component/MoreHtmlHeading.js"></script>
 <h1 is="morehtml-h1">More-HTML is coming</h1>
 ```
-
-For now, we only suggest the above syntax. If you want to cater for a modern-only environment
-you might want simpler syntax, like `<morehtml-h1>More-HTML is coming</morehtml-h1>`
-but for convinience and for the reasons solved and listed for the above solution, this
-way is not planned for now.
 
 ### Configuring the component
 
 By default the component does the following things:
-1) It builds a URL for any heading that can be clicked and reused to find this element again
-1) To build the URL it removes any hash that might be on the URL.
+1) It builds a URL for any heading that can be clicked and reused to find this element again.
 
 #### Attribute `slug`
 
 The slug that will be used to build the link can be auto-generated, simply by leaving out
-the attribute `slug`. If you like to control your links you can determine the hash part of URL by 
-passing a value to `slug`. For example like so:
+the attribute `slug` (not yet implemented). 
+If you like to control your links you can determine the hash part of URL by 
+passing a value to `slug` (still required). For example like so:
 
 ```
-<h1>
-  <morehtml-h1 slug="more-html-is-coming">
-    More-HTML is coming
-  <morehtml-h1>
+<h1 is="morehtml-h1" slug="more-html-is-coming">
+  More-HTML is coming
 </h1>
 ```
 
@@ -42,6 +41,18 @@ By default it might have some kind of hash at the end, just to make sure it neve
 of your IDs on the page. So if you would leave out the `slug` attribute, the URL becomes something like
 this: `https://your.domain/path/#more-html-is-coming-sa7y2s`.
 
+## Development
+
+The following describes how to (help) develop this code.
+
+## Setup and run
+
+- `cd <here>`
+- (if you want a reproducable env using nix) run `nix-shell`
+- `npm i` to install
+- `npm start` to start a webserver, that serves the files of this repo
+- open your browser and open [http://localhost:48001/examples/] to see the examples page
+- develop ...
 
 ## Make a new Release
 
