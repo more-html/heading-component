@@ -62,6 +62,13 @@ Cons:
 1) Not supported in Safari (and might never be, requires polyfill?).
 1) Special code for a solution that might never become a standard.
 
+Supported browsers:
+1) Chrome
+1) Opera
+
+For CBEs there seems to be no polyfill by https://github.com/webcomponents/custom-elements.git
+so no FF, no Safari, etc.
+
 ### Solution 2): Wrapper (outside)
 
 In order to preserve the `<h1>` tag it could be "enhanced" by wrapping it with
@@ -88,6 +95,13 @@ Cons:
    Even worse, since the link icon is not inside the H1 it needs to get the computed styles from the H1 and 
    apply them to the link icon, this sounds computation heavy.
 
+Supported browsers:
+1) Chrome
+1) Opera
+1) Safari
+1) Firefox, native with FF soon, currently using webcomponentsjs polyfill, 70kB
+1) Edge, requires webcomponentsjs polyfill, 70kB
+
 ### Solution 3): Wrapped (inside)
 
 During development of Solution 2) the styling speciality mentioned in the Cons above led to the following solution.
@@ -112,7 +126,14 @@ Cons:
 1) This might just be a handy way to solve it for this special (edge) case!? The styling issue made it a bit hard.
 1) Nesting the web component inside the original tag might work for H1, but won't work for an IMG tag.
 1) Can this approach be applied to other use cases?
-      
+
+Supported browsers:
+1) Chrome
+1) Opera
+1) Safari
+1) Firefox, native with FF soon, currently using webcomponentsjs polyfill, 70kB
+1) Edge, requires webcomponentsjs polyfill, 70kB
+
 ### Solution 4): Pure web component
 
 ```
@@ -125,4 +146,11 @@ Cons:
 1) Does not degrade, without JS the tags become SPANs, dont even render as `display:block`.
    (Solvable via `:not(:defined)` selector?)
 1) Is not SEO enabled. (Might be solvable by schema outline!?)
+
+Supported browsers:
+1) Chrome
+1) Opera
+1) Safari
+1) Firefox, native with FF soon, currently using webcomponentsjs polyfill, 70kB
+1) Edge, requires webcomponentsjs polyfill, 70kB
 
