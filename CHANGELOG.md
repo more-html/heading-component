@@ -12,7 +12,7 @@
 - [x] Apply style of the slotted element
 - [ ] Render the link-icon to the left/right of the headline, depending on rtl setting, if there is space
 - [x] Switched approach to CBEs (see [./SOLUTIONS.md])
-- [ ] Feature detect CBEs properly, e.g. in Safari
+- [ ] Feature detect CBEs properly and only load comp when CBEs work, e.g. in Safari
 
 # v1.0.0
 
