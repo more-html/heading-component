@@ -2,11 +2,13 @@ const template = document.createElement('template');
 template.innerHTML = `
   <style>
     a.linkable {
-      position: absolute;
-      display: none;
+      visibility: hidden;
       background-color: rgba(255, 255, 255, 0.8);
       color: red;
       text-decoration: none;
+    }
+    a.linkable.show {
+      visibility: visible;
     }
   </style>
   <a class="linkable">#</a>
@@ -24,10 +26,10 @@ class MoreHtmlHeading extends HTMLHeadingElement {
     linkEl.setAttribute('href', `#${this.getAttribute('hash')}`);
     this._makeHashAsLinkTargetWork()
     
-    const showLinkable = () => this.shadowRoot.querySelector('.linkable').style.display = 'inline';
-    const hideLinkable = () => this.shadowRoot.querySelector('.linkable').style.display = 'none';
-    this.shadowRoot.addEventListener('pointerover', showLinkable);
-    this.shadowRoot.addEventListener('pointerout', hideLinkable);
+    const showLinkable = () => this.shadowRoot.querySelector('.linkable').classList.add('show');
+    const hideLinkable = () => this.shadowRoot.querySelector('.linkable').classList.remove('show');
+    this.addEventListener('pointerover', showLinkable);
+    this.addEventListener('pointerout', hideLinkable);
   }
   _makeHashAsLinkTargetWork() {
     this.setAttribute('id', this.getAttribute('hash'));
