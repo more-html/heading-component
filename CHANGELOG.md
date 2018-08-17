@@ -9,7 +9,7 @@
 
 # v2.0.0
 
-- [ ] Rename the attribute `slug` to `hash`. Since it is the URL hash, that gets added.
+- [x] Rename the attribute `slug` to `hash`. Since it is the URL hash, that gets added.
 - [ ] On touch devices, show the link onclick, hide it on a second click
 - [ ] Auto generate the slug if none given
 - [x] Apply style of the slotted element
