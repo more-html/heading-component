@@ -7,6 +7,8 @@ template.innerHTML = `
     }
     a.linkable.show {
       visibility: visible;
+    }
+    :host(:hover) a.linkable {
       text-decoration: underline;
     }
   </style>
