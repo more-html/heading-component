@@ -4,6 +4,8 @@
       end it has to deliver a web component, no matter if it is with pure JS, stencil, skate, etc.
 - [ ] Plan/Write about the core/loader component, which can be loaded for common web-component loading/polyfilling/etc.
       will land in a separate repo some day (might start out being embedded in here)
+- [ ] Allow passing in a template which shall be used as the link icon.
+- [ ] Attribute to statically show the link icon, just like MDN does it.
 
 # v2.0.0
 
