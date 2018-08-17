@@ -10,9 +10,9 @@
 # v2.0.0
 
 - [x] Rename the attribute `slug` to `hash`. Since it is the URL hash, that gets added.
-- [ ] On touch devices, show the link onclick, hide it on a second click
-- [ ] Auto generate the slug if none given
-- [x] Apply style of the slotted element
+- [ ] On touch devices, show the link onclick, hide it on a second click.
+- [ ] Auto generate the hash if none given.
+- [x] Apply style of the slotted element.
 - [ ] Render the link-icon to the left/right of the headline, depending on rtl setting, if there is space
 - [x] Switched approach to CBEs (see [./SOLUTIONS.md])
 - [ ] Feature detect CBEs properly and only load comp when CBEs work, e.g. in Safari
