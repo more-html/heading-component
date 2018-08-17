@@ -5,10 +5,10 @@
 - [ ] Plan/Write about the core/loader component, which can be loaded for common web-component loading/polyfilling/etc.
       will land in a separate repo some day (might start out being embedded in here)
 - [ ] Allow passing in a template which shall be used as the link icon.
-- [ ] Attribute to statically show the link icon, just like MDN does it.
 
 # v2.0.0
 
+- [x] Attribute to statically show the link icon, just like MDN does it.
 - [x] Rename the attribute `slug` to `hash`. Since it is the URL hash, that gets added.
 - [ ] On touch devices, show the link onclick, hide it on a second click.
 - [ ] Auto generate the hash if none given.
