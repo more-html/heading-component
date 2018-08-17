@@ -21,7 +21,7 @@ class MoreHtmlHeading extends HTMLHeadingElement {
   }
   connectedCallback() {
     const linkEl = this.shadowRoot.querySelector('.linkable');
-    linkEl.setAttribute('href', `#${this.getAttribute('slug')}`);
+    linkEl.setAttribute('href', `#${this.getAttribute('hash')}`);
     this._makeHashAsLinkTargetWork()
     
     const showLinkable = () => this.shadowRoot.querySelector('.linkable').style.display = 'inline';
@@ -30,7 +30,7 @@ class MoreHtmlHeading extends HTMLHeadingElement {
     this.shadowRoot.addEventListener('pointerout', hideLinkable);
   }
   _makeHashAsLinkTargetWork() {
-    this.setAttribute('id', this.getAttribute('slug'));
+    this.setAttribute('id', this.getAttribute('hash'));
   }
 }
 
