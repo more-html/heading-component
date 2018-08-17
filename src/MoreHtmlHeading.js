@@ -3,12 +3,11 @@ template.innerHTML = `
   <style>
     a.linkable {
       visibility: hidden;
-      background-color: rgba(255, 255, 255, 0.8);
-      color: red;
       text-decoration: none;
     }
     a.linkable.show {
       visibility: visible;
+      text-decoration: underline;
     }
   </style>
   <a class="linkable">#</a>
