@@ -7,6 +7,10 @@ describe('Build hash from the headline text', () => {
     const headline = 'A Headline';
     assert.equal(headlineToHash(headline), 'a-headline---1m169ii');
   });
+  it('replace spaces by dashes', () => {
+    const headline = 'a headline with lots of spaces';
+    assert(headlineToHash(headline).startsWith('a-headline-with-lots-of-spaces')	);
+  });
   it('the hash is deterministic, generates the same every time for the same string', () => {
     const headline = 'Should RESULT in the same hash every time ...';
     assert.equal(headlineToHash(headline), headlineToHash(headline));

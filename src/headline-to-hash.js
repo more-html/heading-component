@@ -14,7 +14,7 @@ const handleSpecialChars = s =>
 
 export const headlineToHash = headline => {
   const lowerCase = s => s.toLowerCase();
-  const spaceToDash = s => s.replace(/\s/, '-');
+  const spaceToDash = s => s.replace(/\s/g, '-');
   const hash = () => (+(headline.toString().split('').map(s => s.charCodeAt(0)).join(''))).toString(32).substr(0, 7);  
   return handleSpecialChars(spaceToDash(lowerCase(headline))) + `---${hash()}`;
 };
