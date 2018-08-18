@@ -3,6 +3,9 @@ const assert = require('assert');
 
 const umlautsMap = {
   'ü': 'ue',
+  'ä': 'ae',
+  'ö': 'oe',
+  'ß': 'ss',
 };
 const replaceWith = (s, replacements) => s.split('').map(char => char in replacements ? replacements[char] : char).join(''); 
 const handleSpecialChars = s =>
@@ -26,6 +29,9 @@ describe('Build hash from the headline text', () => {
   });
   describe('special character handling', () => {
     it('umlaut `ü` gets extended to `ue` (for ze germans)', () => assert(headlineToHash('ü').startsWith('ue')));
+    it('umlaut `ä` gets extended to `ae` (for ze germans)', () => assert(headlineToHash('ä').startsWith('ae')));
+    it('umlaut `ö` gets extended to `oe` (for ze germans)', () => assert(headlineToHash('ö').startsWith('oe')));
+    it('umlaut `ß` gets extended to `ss` (for ze germans)', () => assert(headlineToHash('ß').startsWith('ss')));
   });
 });
 
