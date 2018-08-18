@@ -1,3 +1,5 @@
+import {headlineToHash} from './headline-to-hash.js';
+
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
@@ -40,7 +42,7 @@ class MoreHtmlHeading extends HTMLHeadingElement {
     this.setAttribute('id', this._hash);
   }
   get _hash() {
-    return this.getAttribute('hash');
+    return this.getAttribute('hash') || headlineToHash(this.innerText);
   }
 }
 
