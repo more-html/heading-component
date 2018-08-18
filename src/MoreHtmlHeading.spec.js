@@ -6,6 +6,9 @@ const umlautsMap = {
   'ä': 'ae',
   'ö': 'oe',
   'ß': 'ss',
+  'ò': 'o',
+  'ñ': 'n',
+  'ì': 'i',
 };
 const replaceWith = (s, replacements) => s.split('').map(char => char in replacements ? replacements[char] : char).join(''); 
 const handleSpecialChars = s =>
@@ -32,6 +35,9 @@ describe('Build hash from the headline text', () => {
     it('umlaut `ä` gets extended to `ae` (for ze germans)', () => assert(headlineToHash('ä').startsWith('ae')));
     it('umlaut `ö` gets extended to `oe` (for ze germans)', () => assert(headlineToHash('ö').startsWith('oe')));
     it('umlaut `ß` gets extended to `ss` (for ze germans)', () => assert(headlineToHash('ß').startsWith('ss')));
+    it('umlaut `ò` gets replaced by `o`', () => assert(headlineToHash('ò').startsWith('o')));
+    it('umlaut `ñ` gets replaced by `n`', () => assert(headlineToHash('ñ').startsWith('n')));
+    it('umlaut `ì` gets replaced by `i`', () => assert(headlineToHash('ì').startsWith('i')));
   });
 });
 
