@@ -26,9 +26,9 @@ By default the component does the following things:
 #### Attribute `hash`
 
 The hash that will be used to build the link can be auto-generated, simply by leaving out
-the attribute `hash` (not yet implemented). 
+the attribute `hash`. 
 If you like to control your links you can determine the hash part of URL by 
-passing a value to `hash` (still required). For example like so:
+passing a value to `hash`. For example like so:
 
 ```
 <h1 is="morehtml-h1" hash="more-html-is-coming">
@@ -37,9 +37,9 @@ passing a value to `hash` (still required). For example like so:
 ```
 
 When the user hovers the heading, the linkable URL will be: `https://your.domain/path/#more-html-is-coming`.
-By default it might have some kind of hash at the end, just to make sure it never interfers with any
+By default it has a hash at the end, just to make sure it never interfers with any
 of your IDs on the page. So if you would leave out the `hash` attribute, the URL becomes something like
-this: `https://your.domain/path/#more-html-is-coming-sa7y2s`.
+this: `https://your.domain/path/#more-html-is-comingi---sa7y2s`.
 
 ## Development
 
