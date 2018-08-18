@@ -41,6 +41,22 @@ By default it has a hash at the end, just to make sure it never interfers with a
 of your IDs on the page. So if you would leave out the `hash` attribute, the URL becomes something like
 this: `https://your.domain/path/#more-html-is-comingi---sa7y2s`.
 
+#### Attribute `show-link`
+
+This attribute shows the link to this headline right away. Otherwise the link would just show up 
+when hovering the headline. Just add the attribute (no matter it's value) and the link will be 
+rendered as soon as the component is processed.
+
+This is how you could use it:
+
+```
+<h1 is="morehtml-h1" show-link>My H1</h1>
+```
+
+this will show the headline and the link icon to the left, so your headline might look like
+this `# MyH1` right from the start.
+
+
 ## Development
 
 The following describes how to (help) develop this code.
