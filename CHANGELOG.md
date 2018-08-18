@@ -7,9 +7,12 @@
 - [ ] Allow passing in a template which shall be used as the link icon.
 - [ ] Use a lib that does special character replacing for hash building.
 - [ ] Use hamjest for more explicit error messages.
+- [ ] Do the render-when-ready trick, to prevent flickering in case the component changes the rendering.
+- [ ] Write proper tests, that ensure it works in the browser as expected (pupeteer?).
 
 # v2.0.0
 
+- [ ] Use `id` attribute as hash if given, this is just the normal style, so we should be compatible with it.
 - [x] Attribute to statically show the link icon, just like MDN does it.
 - [x] Rename the attribute `slug` to `hash`. Since it is the URL hash, that gets added.
 - [ ] On touch devices, show the link onclick, hide it on a second click.
