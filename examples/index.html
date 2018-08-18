@@ -15,9 +15,11 @@
     This H2 uses the tag <code>&lt;morehtml-h2&gt;</code> for this specific headline.
   </p>
 
-  <h3 is="morehtml-h3" hash="h3-headline">H3 headline</h3>
+  <h3 is="morehtml-h3">H3 with ümlauts and alikes ßÜñ</h3>
   <p>
-    Just like the H2, just an H3 :).
+    The special characters should not show up in the hash, since that might
+    screw up the URL and to make it simpler, we make URLs contain simple chars/ASCII only.
+    In the end they are only hashes on a URL, but supposed to stay kinda a useful.
   </p>
 
   <h4 style="margin: 2rem;" is="morehtml-h4" hash="h4-headline" show-link>
