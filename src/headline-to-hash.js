@@ -8,9 +8,10 @@ const umlautsMap = {
   'ñ': 'n',
   'ì': 'i',
 };
+const replaceNonAsciis = s => s.replace(/[^a-zA-Z0-9]/g, '-')
 const replaceWith = (s, replacements) => s.split('').map(char => char in replacements ? replacements[char] : char).join(''); 
 const handleSpecialChars = s =>
-  replaceWith(s, umlautsMap);
+  replaceNonAsciis(replaceWith(s, umlautsMap));
 
 export const headlineToHash = headline => {
   const lowerCase = s => s.toLowerCase();
