@@ -6,6 +6,8 @@ import assert from 'assert';
 //   - [ ] (maybe throw a warning!?)
 // - [x] given hash and no ID, set hash as ID
 // - [ ] no hash, no ID, use generated hash as ID
+// - [ ] provide the Map glue code, between the DOM attributes and the Map used here.
+
 
 const setLinkTarget = ({attributes}) => {
   if (attributes.has('id')) return;
