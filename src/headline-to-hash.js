@@ -8,11 +8,11 @@ const umlautsMap = {
   'ñ': 'n',
   'ì': 'i',
 };
-const singlefyDashes = s => s.replace(/-{1,}/g, '-');
+const simplifyDashes = s => s.replace(/-{1,}/g, '-').replace(/^-*/, '').replace(/-*$/, '');
 const replaceNonAsciis = s => s.replace(/[^a-zA-Z0-9]/g, '-')
 const replaceWith = (s, replacements) => s.split('').map(char => char in replacements ? replacements[char] : char).join(''); 
 const handleSpecialChars = s =>
-  singlefyDashes(replaceNonAsciis(replaceWith(s, umlautsMap)));
+  simplifyDashes(replaceNonAsciis(replaceWith(s, umlautsMap)));
 
 export const headlineToHash = headline => {
   const lowerCase = s => s.toLowerCase();
