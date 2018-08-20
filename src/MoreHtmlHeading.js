@@ -4,6 +4,8 @@ const template = document.createElement('template');
 template.innerHTML = `
   <style>
     a.linkable {
+      color: inherit;
+      background: inherit;
       visibility: hidden;
       text-decoration: none;
     }
