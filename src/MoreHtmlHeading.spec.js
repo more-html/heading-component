@@ -15,6 +15,10 @@ describe('Build hash from the headline text', () => {
     const headline = 'a{b}c?d:e!f#g%h&i*j';
     assert(headlineToHash(headline).startsWith('a-b-c-d-e-f-g-h-i-j'));
   });
+  it('replace multiple dashes with one', () => {
+    const headline = 'abc----def--ghi-jkl';
+    assert(headlineToHash(headline).startsWith('abc-def-ghi-jkl'));
+  });
   it('the hash is deterministic, generates the same every time for the same string', () => {
     const headline = 'Should RESULT in the same hash every time ...';
     assert.equal(headlineToHash(headline), headlineToHash(headline));
