@@ -12,6 +12,7 @@
 
 # v2.0.0
 
+- [x] remove nix setup, replace by docker, way more compatible with the real world
 - [x] Apply colors of the actual heading element.
 - [ ] Use `id` attribute as hash if given. This is the normal style, so we should be compatible with it.
 - [x] Attribute to statically show the link icon, just like MDN does it.
