@@ -26,9 +26,8 @@ class MoreHtmlHeading extends HTMLHeadingElement {
   }
   connectedCallback() {
     const linkEl = this.shadowRoot.querySelector('.linkable');
-    linkEl.setAttribute('href', `#${this._hash}`);
-    this._makeHashAsLinkTargetWork()
-   
+    linkEl.setAttribute('href', `#${this.id}`);
+
     const showLinkable = () => this.shadowRoot.querySelector('.linkable').classList.add('show');
     const hideLinkable = () => this.shadowRoot.querySelector('.linkable').classList.remove('show');
     if (this.hasAttribute('show-link')) {
@@ -37,12 +36,6 @@ class MoreHtmlHeading extends HTMLHeadingElement {
       this.addEventListener('pointerover', showLinkable);
       this.addEventListener('pointerout', hideLinkable);
     }	
-  }
-  _makeHashAsLinkTargetWork() {
-    this.setAttribute('id', this._hash);
-  }
-  get _hash() {
-    return this.getAttribute('hash');
   }
 }
 

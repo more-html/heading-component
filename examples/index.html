@@ -5,33 +5,33 @@
 
 <script type="module" src="../src/MoreHtmlHeading-loader.js"></script>
 <body style="margin: 0;">
-  <h1 is="morehtml-h1" hash="example-page">The Example Page of &lt;h1 is=morehtml-h1&gt; </h1>
+  <h1 is="morehtml-h1" id="example-page">The Example Page of &lt;h1 is=morehtml-h1&gt; </h1>
   <p>
-    Normally there is a lot of text below such an H1, until there is an H2 at some point.
+    When hovering over the H1 above should show an icon with a link which allows to copy the URL.
   </p>
 
-  <h2 is="morehtml-h2" hash="sub-headline">A sub headline</h2>
+  <h2 is="morehtml-h2" id="sub-headline">A sub headline</h2>
   <p>
-    This H2 uses the tag <code>&lt;morehtml-h2&gt;</code> for this specific headline.
+    The link should also appear on an H2.
+    Basically this is just <br>
+    <code>&lt;h2 is="morehtml-h2"</code>
   </p>
 
-  <h3 is="morehtml-h3">H3 with ümlauts and alikes ßÜñ</h3>
+  <h3 is="morehtml-h3">Headline with missing id attribute</h3>
   <p>
-    The special characters should not show up in the hash, since that might
-    screw up the URL and to make it simpler, we make URLs contain simple chars/ASCII only.
-    In the end they are only hashes on a URL, but supposed to stay kinda a useful.
+    No link should show up, since the "id" attribute is required and missing here.
   </p>
 
-  <h4 style="margin: 2rem;" is="morehtml-h4" hash="h4-headline" show-link>
-    H4 headline with space on the left of the heading (for the link icon)
+  <h4 style="margin: 2rem;" is="morehtml-h4" id="h4-headline">
+    H4 headline with space on the left of the heading.
   </h4>
   <p>
     Just like the H2, just an H4 :).
   </p>
 
   <div style="direction: rtl;">
-    <h2 is="morehtml-h2" hash="rtl">A RTL H2, let's see how that goes!?</h2>
-    <p>and some text below, which should all be right to left, shouldnt it?</p>
+    <h2 is="morehtml-h2" id="rtl">A RTL H2, let's see how that goes!?</h2>
+    <p>The link should show up on the left of the heading.</p>
   </div>
 
 </body>
