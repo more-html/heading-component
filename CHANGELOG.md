@@ -9,6 +9,7 @@
 - [ ] Use hamjest for more explicit error messages.
 - [ ] Do the render-when-ready trick, to prevent flickering in case the component changes the rendering.
 - [ ] Write proper tests, that ensure it works in the browser as expected (pupeteer?).
+- [ ] `<script src="MoreHtmlHeading.js?debug"` When loading with debug show messages like "Missing `id` attribute, no link rendered, etc." 
 
 # v3.0.0
 
@@ -17,7 +18,6 @@
 - [ ] Remove `hash` attribute, cant be jumped to, at least I see no easy way now.
 - [ ] On touch devices, show the link onclick, hide it on a second click.
 - [ ] Feature detect CBEs properly and only load comp when CBEs work, e.g. in Safari
-- [ ] `<script src="MoreHtmlHeading.js?debug"` When loading with debug show messages like "Missing `id` attribute, no link rendered, etc." 
 
 # v2.0.0
 
