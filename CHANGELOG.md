@@ -14,8 +14,8 @@
 # v3.0.0
 
 - [x] remove nix setup, replace by docker, way more compatible with the real world
-- [ ] Use `id` attribute as hash if given. This is the normal style, so we should be compatible with it.
-- [ ] Remove `hash` attribute, cant be jumped to, at least I see no easy way now.
+- [x] Use `id` attribute as hash if given. This is the normal style, so we should be compatible with it.
+- [x] Remove `hash` attribute, cant be jumped to, at least I see no easy way now.
 - [ ] On touch devices, show the link onclick, hide it on a second click.
 - [ ] Feature detect CBEs properly and only load comp when CBEs work, e.g. in Safari
 
