@@ -1,5 +1,5 @@
 # heading-component
-Enhance &lt;h1>, &lt;h2>, etc. for example to allow linking to them by default.
+Enhance <h1>, <h2>, etc. for example to allow linking to them by default.
 
 ## How to use it?
 
@@ -22,40 +22,8 @@ The following is built with a strong focus on it.
 
 By default the component does the following things:
 1) It builds a URL for any heading that can be clicked and reused to find this element again.
-
-#### Attribute `hash`
-
-The hash that will be used to build the link can be auto-generated, simply by leaving out
-the attribute `hash`. 
-If you like to control your links you can determine the hash part of URL by 
-passing a value to `hash`. For example like so:
-
-```
-<h1 is="morehtml-h1" hash="more-html-is-coming">
-  More-HTML is coming
-</h1>
-```
-
-When the user hovers the heading, the linkable URL will be: `https://your.domain/path/#more-html-is-coming`.
-By default it has a hash at the end, just to make sure it never interfers with any
-of your IDs on the page. So if you would leave out the `hash` attribute, the URL becomes something like
-this: `https://your.domain/path/#more-html-is-comingi---sa7y2s`.
-
-#### Attribute `show-link`
-
-This attribute shows the link to this headline right away. Otherwise the link would just show up 
-when hovering the headline. Just add the attribute (no matter it's value) and the link will be 
-rendered as soon as the component is processed.
-
-This is how you could use it:
-
-```
-<h1 is="morehtml-h1" show-link>My H1</h1>
-```
-
-this will show the headline and the link icon to the left, so your headline might look like
-this `# MyH1` right from the start.
-
+   For this to work it requires the tag to have an `id` attribute which will be used as the
+   hash in the url.
 
 ## Development
 
