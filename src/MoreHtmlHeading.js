@@ -14,8 +14,8 @@ template.innerHTML = `
       text-decoration: underline;
     }
   </style>
-  <a class="linkable">#</a>
   <slot></slot>
+  <a class="linkable">#</a>
 `;
 
 class MoreHtmlHeading extends HTMLHeadingElement {
