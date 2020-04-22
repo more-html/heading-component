@@ -64,7 +64,7 @@ The following describes how to (help) develop this code.
 ## Setup and run
 
 - `cd <here>`
-- (if you want a reproducable env using nix) run `nix-shell`
+- `./run.sh /bin/bash` will build and start a docker container in there the runtime is setup (currently nodejs)
 - `npm i` to install
 - `npm start` to start a webserver, that serves the files of this repo
 - open your browser and open [http://localhost:48001/examples/] to see the examples page
