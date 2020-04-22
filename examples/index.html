@@ -17,6 +17,24 @@
     <code>&lt;h2 is="morehtml-h2"</code>
   </p>
 
+  <h2 is="morehtml-h2" id="complex-headline">
+    <a href="#">
+      <span>Complex headline markup</span>
+    </a>
+  </h2>
+  <p>
+    The headline itself should be linked to #,
+    the "#" behind it should provide a link with the id as hash at the end.
+  </p>
+
+  <a href="#">
+    <h2 is="morehtml-h2" id="wrapped-headline">Wrapped Headline in a-href</h2>
+  </a>
+  <p>
+    The headline itself should be linked to #,
+    the "#" behind it should provide a link with the id as hash at the end.
+  </p>
+
   <h3 is="morehtml-h3">Headline with missing id attribute</h3>
   <p>
     No link should show up, since the "id" attribute is required and missing here.
