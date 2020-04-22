@@ -17,6 +17,7 @@
 - [ ] Remove `hash` attribute, cant be jumped to, at least I see no easy way now.
 - [ ] On touch devices, show the link onclick, hide it on a second click.
 - [ ] Feature detect CBEs properly and only load comp when CBEs work, e.g. in Safari
+- [ ] `<script src="MoreHtmlHeading.js?debug"` When loading with debug show messages like "Missing `id` attribute, no link rendered, etc." 
 
 # v2.0.0
 
